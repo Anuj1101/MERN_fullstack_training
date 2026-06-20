@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+            name:"Aditi",
+            course:"Btech",
+            address:{
+                city:"gorakhpur",
+                state:"Uttar Pradesh",
+                pincode:277201
+            },
+            roll:11,
+            semester:7
+        }
+        console.log(user);
+        //passing the reference
+        let user1=user;
+
+        //shallow copy - everyting feels perfect untill the value is object inner object pass reference only
+        let user2 ={...user}
+
+        //deep copy
+        let temp= JSON.stringify(user);
+        let user3=JSON.parse(temp);
+        console.log(user3)
+        //deepcopy best method
+        let user4=structuredClone(user);
+        //Alice Destructing
+        const {name:fullName}=user;
+        //default value destruct
+        const {age=21} = user;
+        
+        let fees={
+            total:3000,
+            paid:500,
+            dues:2500
+        }
+        let student={
+            ...user,
+            ...fees
+        }
+    </script>
+</body>
+</html>

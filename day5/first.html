@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="icon" href="icon.png">
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            border-top: 10px double;
+            border-left:10px dashed;
+            border-bottom:10px solid;
+            border-right:10px dotted;
+            display:grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(5,1fr);
+        }
+        .box{
+            border:2px solid red;
+        }
+        .shrijan{
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            grid-column-start: 1;
+            grid-column-end:3;
+            grid-row-start: 1;
+            grid-row-end:3;
+        }
+        .ayush{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            grid-column-start: 3;
+            grid-column-end:5;
+            grid-row-start: 3;
+            grid-row-end:5;
+        }
+        .one{
+            order: 3;
+            background-color: aquamarine;
+        }
+        .two{
+            order: 2;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box shrijan">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box ayush">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+        <div class="box">19</div>
+        <div class="box">20</div>
+    </div>
+</body>
+</html>
